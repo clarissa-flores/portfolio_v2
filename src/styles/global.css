@@ -1,0 +1,219 @@
+/* Global styles */
+html {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+body {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+::selection {
+  background-color: #bd93f9;
+}
+
+/* Headings */
+h1,
+h2 {
+  font-family: "Victor Mono", monospace;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.6em;
+  margin: 0;
+  background: #ff79c6;
+  background: linear-gradient(to left, #ff79c6 0%, #bd93f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  text-decoration: underline #bd93f9;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  font-size: 2.1em;
+  margin-bottom: 0;
+}
+
+/* Paragraphs */
+p {
+  font-family: "Victor Mono", monospace;
+  font-size: 1.1em;
+  hyphens: auto;
+  line-height: 1.5;
+  text-indent: 1em;
+}
+
+small {
+  font-family: "Victor Mono", monospace;
+  font-size: small;
+}
+
+a {color: #bd93f9;}
+
+/* Images */
+.profile {
+  margin: 20px;
+  max-width: 250px;
+  padding: 10px;
+  border-radius: 100%;
+  background: linear-gradient(90deg, #bd93f9 0%, #ff79c6 100%);
+}
+
+/* Sections */
+#hero {
+  text-align: center;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.title-link,
+.nav-links {
+  font-family: "Victor Mono", monospace;
+  font-size: 1rem;
+}
+
+.title-link a,
+.nav-links a {
+  color: #f8f8f2;
+  text-decoration: none;
+}
+
+.title-link a:hover,
+.nav-links a:hover,
+a:focus {
+  text-decoration: underline #bd93f9;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.nav-links {
+  font-family: "Victor Mono", monospace;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.nav-links a {
+  margin: 0 10px;
+}
+
+/* Footer */
+.foot-btn {
+  display: flex;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #f8f8f2;
+}
+
+.foot-btn:hover {
+  border-color: #ff79c6;
+}
+
+.light .foot-btn {
+  border: 2px solid #bd93f9;
+}
+
+.git-icon {
+  content: url("/github-mark-white.svg");
+}
+
+.mail-icon {
+  content: url("/mail-white.svg");
+}
+
+.linked-in {
+  content: url("/li-in-white.png");
+}
+
+/* Card listing */
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 1rem;
+  padding: 0;
+}
+
+/* Theme Icon */
+html.light {
+  background-color: #f8f8f2;
+  color: #282a36;
+}
+
+.light .title-link a {
+  color: #282a36;
+}
+
+.light .card-title {
+  color: #282a36;
+}
+
+.light .card-txt {
+  color: #282a36;
+}
+
+.light .nav-links a {
+  color: #282a36;
+}
+
+.light .link-card > a {
+  color: #282a36;
+}
+
+.light .button {
+  color: #282a36;
+}
+
+.light .button:hover {
+  color: #f8f8f2;
+}
+
+.light .foot-btn:hover {
+  border-color: #ff79c6;
+}
+
+.light .git-icon {
+  content: url("/github-mark.svg");
+}
+
+.light .mail-icon {
+  content: url("/mail.svg");
+}
+
+.light .linked-in {
+  content: url("/li-in.png");
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  body {
+    width: 320px;
+  }
+
+  .nav-bar {
+    display: initial;
+  }
+
+  .title-link {
+    text-align: center;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links a {
+    margin: 0 11px;
+  }
+}

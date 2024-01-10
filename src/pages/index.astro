@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Clarissa Flores";
+---
+
+<Layout pageTitle={pageTitle}>
+  <section id="hero">
+    <img class="profile" src="/profile.jpg" /><br />
+    <small>Hi, my name is</small>
+    <h1>Clarissa Flores</h1>
+    <p>
+      I am an enthusiastic web developer equipped with a comprehensive skillset
+      encompassing front-end and back-end technologies. Proven ability to thrive
+      in both independent and collaborative environments.
+    </p>
+    <div class="button">
+      <a href="/Clarissa_Flores_-_Web_Developer.pdf">
+        <button class="button">My resume</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+<style>
+  /* Button */
+  button {
+    background: linear-gradient(to right, #bd93f9 0%, #ff79c6 100%);
+    border: none;
+    border-radius: 8px;
+    color: #f8f8f2;
+    font:
+      600 16px "Victor Mono",
+      monotype;
+    padding: 8px 16px;
+    transition:
+      background-color 0.4s,
+      color 0.4s;
+  }
+
+  button:hover {
+    background: linear-gradient(to right, #bd93f9 0%, #ff79c6 100%);
+    color: #282a36;
+    cursor: pointer;
+  }
+
+  .button {
+    text-align: center;
+  }
+</style>

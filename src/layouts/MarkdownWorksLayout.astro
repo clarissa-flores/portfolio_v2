@@ -1,0 +1,60 @@
+---
+import BaseLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h2>{frontmatter.title}</h2>
+  <slot />
+  <p><small>PLATFORM</small><span style="font-size: 0.8em;">{frontmatter.platform}</span></p>
+  <p><small>STACK</small><span style="font-size: 0.8em;">{frontmatter.stack}</span></p>
+  <p>
+    <small>WEBSITE</small><a href={frontmatter.website} target="_blank"
+      >{frontmatter.website}</a
+    >
+  </p>
+  <p>
+    <small>GITHUB</small><a href={frontmatter.github} target="_blank"
+      >{frontmatter.github}</a
+    >
+  </p>
+  <div class="img">
+    <img src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
+  </div>
+</BaseLayout>
+<style>
+  .img {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 16px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  small {
+    background-color: #bd93f9;
+    color: #f8f8f2;
+    border-radius: 6px;
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-right: 5px;
+    padding: 0.3em 0.3em;
+  }
+
+  a {
+    color: #ff79c6;
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 300px;
+    }
+  }
+</style>
