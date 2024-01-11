@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  text-decoration: underline #bd93f9;
+  text-decoration: underline wavy #bd93f9;
   text-decoration-thickness: 4px;
   text-underline-offset: 6px;
   font-size: 2.1em;
@@ -42,7 +42,7 @@ h2 {
 /* Paragraphs */
 p {
   font-family: "Victor Mono", monospace;
-  font-size: 1.1em;
+  font-size: 1em;
   hyphens: auto;
   line-height: 1.5;
   text-indent: 1em;
@@ -53,7 +53,18 @@ small {
   font-size: small;
 }
 
-a {color: #bd93f9;}
+a {
+  color: #bd93f9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff79c6;
+}
+
+li {
+  font-family: "Victor Mono", monospace;
+}
 
 /* Images */
 .profile {
@@ -71,16 +82,17 @@ a {color: #bd93f9;}
 
 /* Navigation Bar */
 .nav-bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 
 .title-link,
 .nav-links {
   font-family: "Victor Mono", monospace;
-  font-size: 1rem;
+  font-size: 0.8em;
 }
 
 .title-link a,
@@ -92,15 +104,21 @@ a {color: #bd93f9;}
 .title-link a:hover,
 .nav-links a:hover,
 a:focus {
-  text-decoration: underline #bd93f9;
+  text-decoration: underline wavy #bd93f9;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
 
+.title-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-links {
-  font-family: "Victor Mono", monospace;
-  font-size: 0.8rem;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links a {
@@ -110,9 +128,9 @@ a:focus {
 /* Footer */
 .foot-btn {
   display: flex;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
+  padding: 8px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   border: 2px solid #f8f8f2;
 }
@@ -202,11 +220,14 @@ html.light {
   }
 
   .nav-bar {
-    display: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .title-link {
     text-align: center;
+    margin-bottom: 0.8em;
   }
 
   .nav-links {
