@@ -9,7 +9,7 @@ worksImage1:
     url: '/drumkit.png'
     alt: ''
 platform: Web
-stack: Astro, JavaScript
+stack: HTML, CSS, JavaScript
 website: https://clarissa-flores.github.io/DrumKit/
 github: https://github.com/clarissa-flores/DrumKit
 ---

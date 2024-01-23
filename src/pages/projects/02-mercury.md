@@ -9,7 +9,7 @@ worksImage1:
     url: '/mercury.png'
     alt: ''
 platform: Web
-stack: Astro, JavaScript
+stack: HTML, CSS, Bootstrap, JavaScript
 website: https://clarissa-flores.github.io/mercury-status/
 github:  https://github.com/clarissa-flores/mercury-status
 ---
