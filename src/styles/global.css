@@ -39,6 +39,14 @@ h2 {
   margin-bottom: 0;
 }
 
+h3 {
+  font-family: "Victor Mono", monospace;
+  text-decoration: underline solid #bd93f9;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  margin-bottom: 0;
+}
+
 /* Paragraphs */
 p {
   font-family: "Victor Mono", monospace;
