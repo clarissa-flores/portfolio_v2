@@ -1,14 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 const pageTitle = "Posts";
+const res = await fetch("http://portfolio.local/wp-json/wp/v2/posts");
+const posts = await res.json();
 ---
 <Layout pageTitle={pageTitle}>
-    <div class="gif">
-        <img width="300" height="259" alt="RaccoonLaptopGif" src="/blog.webp"/>
-    </div>
-    <h2>Blog</h2>
-    <ul role="list" class="link-card-grid">
+    <h1>Astro + WordPress</h1>
+
+    {
+        posts.map((post) => (
+            <h2 set:html={post.title.rendered} />
+            <p set:html={post.content.rendered} />
+        ))
+      }
+
+
+    <!-- <ul role="list" class="link-card-grid">
         <Card
             url="https://medium.com/"
             image="/blog.png"
@@ -48,5 +55,5 @@ const pageTitle = "Posts";
             title="Video 2"
             body="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci"
         />
-    </ul>
+    </ul> -->
 </Layout>
