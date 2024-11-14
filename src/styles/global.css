@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  max-width: 540px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: justify;
 }
@@ -23,7 +23,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2.6em;
+  font-size: 2.5em;
   margin: 0;
   background: #ff79c6;
   background: linear-gradient(to left, #ff79c6 0%, #bd93f9 100%);
@@ -68,6 +68,7 @@ a {
 
 a:hover {
   color: #ff79c6;
+  transition: 0.5s ease-in-out;
 }
 
 li {
@@ -79,8 +80,15 @@ li {
   margin: 20px;
   max-width: 250px;
   padding: 10px;
-  border-radius: 100%;
+  border-radius: 16px;
+  rotate: 4deg;
   background: linear-gradient(90deg, #bd93f9 0%, #ff79c6 100%);
+  filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.3));
+}
+
+.profile:hover {
+  rotate: 0deg;
+  transition: all 1s ease;
 }
 
 /* Sections */
@@ -93,25 +101,28 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 3em;
 }
 
 .title-link,
 .nav-links {
   font-family: "Victor Mono", monospace;
-  font-size: 0.8em;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
 }
 
 .title-link a,
 .nav-links a {
   color: #f8f8f2;
-  text-decoration: none;
+  text-decoration-color: #bd93f9;
 }
 
 .title-link a:hover,
 .nav-links a:hover,
 a:focus {
+  font-weight: 900;
   text-decoration: underline wavy #bd93f9;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
